@@ -1,7 +1,8 @@
 const grid = document.querySelector(".grid");
 const gridValue = document.querySelector(".grid-size");
 const gridSize = document.querySelector("input");
-const btnApply = document.querySelector(".apply")
+const btnApply = document.querySelector(".apply");
+const btnReset = document.querySelector(".reset");
 let squareSize = 8;
 
 createGrid(squareSize);
@@ -22,7 +23,7 @@ function createDiv(size) {
 function createGrid(gridSize) {
   for (let i = 0; i < gridSize; i++) {
     for (let j = 0; j < gridSize; j++) {
-      grid.appendChild(createDiv(grid.clientWidth / gridSize))
+      grid.appendChild(createDiv(grid.clientWidth / gridSize));
     }
   }
 }
@@ -35,6 +36,17 @@ btnApply.addEventListener("click", () => {
   }
 
   createGrid(squareSize);
+})
+
+btnReset.addEventListener("click", () => {
+  const boxes = document.querySelectorAll(".box");
+
+  boxes.forEach(box => {
+    box.classList.remove("active");
+  })
+
+  gridValue.textContent = `${squareSize}x${squareSize}`;
+  gridSize.value = squareSize;
 })
 
 gridSize.oninput = function() {
