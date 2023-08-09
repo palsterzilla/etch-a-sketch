@@ -16,7 +16,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #A1CCD1;
 }
 
 .container {
@@ -31,7 +31,7 @@ body {
 
 .grid {
   display: flex;
-  border: 2px red solid;
+  border: 2px #F4F2DE solid;
   border-radius: 1rem;
   flex-flow: row wrap;
   height: 70rem;
@@ -41,6 +41,11 @@ body {
 }
 
 .box {
-  border: 0.5px solid rgba(114, 200, 240, 0.3);
+  border: 0.5px solid rgba(159, 13, 127, 0.3);
   border-radius: 0.5rem;
+  background-color: #F4F2DE;
+}
+
+.active {
+  background-color: #E9B384;
 }

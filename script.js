@@ -10,6 +10,10 @@ function createDiv(size) {
   div.classList.add('box');
   div.style.width = `${size}px`;
   div.style.height = `${size}px`;
+  
+  div.addEventListener("mouseover", () => {
+    div.classList.add('active');
+  })
 
   return div;
 }
