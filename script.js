@@ -1,6 +1,7 @@
 const grid = document.querySelector(".grid");
 const gridValue = document.querySelector(".grid-size");
 const gridSize = document.querySelector(".range");
+const gridRainbow = document.querySelector(".checkbox");
 const btnApply = document.querySelector(".apply");
 const btnReset = document.querySelector(".reset");
 let squareSize = 8;
@@ -14,7 +15,7 @@ function createDiv(size) {
   div.style.height = `${size}px`;
   
   div.addEventListener("mouseover", () => {
-    div.style.backgroundColor = activeColor()
+    div.style.backgroundColor = colorSelector()
   })
 
   return div;
@@ -54,14 +55,15 @@ gridSize.oninput = function() {
   gridValue.textContent = `${value}x${value}`;
 }
 
-function randomColor() {
+function colorSelector() {
   let color = [];
   for (let i = 0; i < 3; i++) {
     color.push(Math.floor(Math.random() * 256));
   }
-  return 'rgb(' + color.join(', ') + ')';
-}
 
-function activeColor() {
-  return "rgb(233, 179, 132)";
+  if (gridRainbow.checked) {
+    return 'rgb(' + color.join(', ') + ')';
+  } else {
+    return "rgb(233, 179, 132)";
+  }
 }
