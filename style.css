@@ -16,7 +16,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
-  background-color: #A1CCD1;
+  background-color: rgb(161, 204, 209);
 }
 
 h1 {
@@ -50,7 +50,7 @@ h1 {
 .box {
   border: 0.5px solid rgba(159, 13, 127, 0.3);
   border-radius: 0.5rem;
-  background-color: #F4F2DE;
+  background-color: rgb(244, 242, 222);
 }
 
 .controls h3 {
@@ -59,7 +59,7 @@ h1 {
 }
 
 .controls-inner {
-  background-color: #7C9D96;
+  background-color: rgb(124, 157, 150);
   text-align: center;
   padding: 2rem;
   border-top-left-radius: 1rem;
@@ -77,8 +77,8 @@ h1 {
 
 .apply,
 .reset {
-  background-color: #E9B384;
-  color: #F4F2DE;
+  background-color: rgb(233, 179, 132);
+  color: rgb(244, 242, 222);
   margin: 0 auto;
   padding: 0.5rem 1rem;
   border: none;
