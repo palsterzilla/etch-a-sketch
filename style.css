@@ -66,8 +66,13 @@ h1 {
   border-bottom-left-radius: 1rem;
 }
 
-input {
+.range,
+.checkbox {
   display: block;
+}
+
+.checkbox {
+  margin: 0.5rem 0;
 }
 
 .apply,
