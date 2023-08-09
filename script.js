@@ -1,7 +1,7 @@
 const grid = document.querySelector(".grid");
 const gridValue = document.querySelector(".grid-size");
 const gridSize = document.querySelector("input");
-let squareSize = 2;
+let squareSize = 8;
 
 createGrid(squareSize);
 
