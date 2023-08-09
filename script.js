@@ -1,6 +1,7 @@
 const grid = document.querySelector(".grid");
 const gridValue = document.querySelector(".grid-size");
 const gridSize = document.querySelector("input");
+const btnApply = document.querySelector(".apply")
 let squareSize = 8;
 
 createGrid(squareSize);
@@ -25,3 +26,14 @@ function createGrid(gridSize) {
     }
   }
 }
+
+btnApply.addEventListener("click", () => {
+  squareSize = Number(gridSize.value);
+
+  while (grid.firstChild) {
+    grid.removeChild(grid.firstChild);
+  }
+
+  createGrid(squareSize);
+
+})
