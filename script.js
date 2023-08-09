@@ -14,7 +14,7 @@ function createDiv(size) {
   div.style.height = `${size}px`;
   
   div.addEventListener("mouseover", () => {
-    div.classList.add('active');
+    div.style.backgroundColor = activeColor()
   })
 
   return div;
@@ -42,9 +42,9 @@ btnReset.addEventListener("click", () => {
   const boxes = document.querySelectorAll(".box");
 
   boxes.forEach(box => {
-    box.classList.remove("active");
+    box.style.backgroundColor = "rgb(244, 242, 222)";
   })
-
+  
   gridValue.textContent = `${squareSize}x${squareSize}`;
   gridSize.value = squareSize;
 })
@@ -52,4 +52,16 @@ btnReset.addEventListener("click", () => {
 gridSize.oninput = function() {
   let value = this.value;
   gridValue.textContent = `${value}x${value}`;
+}
+
+function randomColor() {
+  let color = [];
+  for (let i = 0; i < 3; i++) {
+    color.push(Math.floor(Math.random() * 256));
+  }
+  return 'rgb(' + color.join(', ') + ')';
+}
+
+function activeColor() {
+  return "rgb(233, 179, 132)";
 }
