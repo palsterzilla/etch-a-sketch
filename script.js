@@ -35,5 +35,9 @@ btnApply.addEventListener("click", () => {
   }
 
   createGrid(squareSize);
-
 })
+
+gridSize.oninput = function() {
+  let value = this.value;
+  gridValue.textContent = `${value}x${value}`;
+}
