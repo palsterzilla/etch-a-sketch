@@ -32,7 +32,6 @@ h1 {
 }
 
 .controls {
-  /* TODO: create better styling for controller */
   display: flex;
   align-items: center;
 }
@@ -56,4 +55,34 @@ h1 {
 
 .active {
   background-color: #E9B384;
+}
+
+.controls h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.controls-inner {
+  background-color: #7C9D96;
+  text-align: center;
+  padding: 2rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+input {
+  display: block;
+}
+
+.apply,
+.reset {
+  background-color: #E9B384;
+  color: #F4F2DE;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
 }
