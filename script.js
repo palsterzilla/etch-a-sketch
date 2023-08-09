@@ -1,6 +1,6 @@
 const grid = document.querySelector(".grid");
 const gridValue = document.querySelector(".grid-size");
-const gridSize = document.querySelector("input");
+const gridSize = document.querySelector(".range");
 const btnApply = document.querySelector(".apply");
 const btnReset = document.querySelector(".reset");
 let squareSize = 8;
