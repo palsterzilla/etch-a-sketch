@@ -19,8 +19,16 @@ body {
   background-color: #A1CCD1;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 4rem;
+}
+
 .container {
   display: flex;
+  justify-content: center;
 }
 
 .controls {
