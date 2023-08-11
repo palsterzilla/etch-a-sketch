@@ -15,10 +15,6 @@ function createDiv(size) {
   div.style.width = `${size}px`;
   div.style.height = `${size}px`;
   
-  div.addEventListener("mouseover", () => {
-    div.style.backgroundColor = colorSelector()
-  })
-
   return div;
 }
 
@@ -71,3 +67,13 @@ gridSize.oninput = function() {
   let value = this.value;
   gridValue.textContent = `${value}x${value}`;
 }
+
+// Change background color on hover
+grid.addEventListener("mouseover", function(e) {
+  if (e.target.classList.contains("box")) {
+    const boxes = document.querySelectorAll(".box");
+    boxes.forEach(box => {
+      box.addEventListener("mouseover", () => box.style.backgroundColor = colorSelector())
+    })
+  }
+})
